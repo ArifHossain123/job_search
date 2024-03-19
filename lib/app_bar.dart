@@ -1,3 +1,30 @@
+import 'package:flutter/material.dart';
+
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+ 
+ final   Color backgroundColor;
+  const CustomAppBar({
+    super.key,
+   
+    required this.backgroundColor,
+  });
+  @override
+  Size get preferredSize => const Size.fromHeight(
+        60,
+      );
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      backgroundColor: backgroundColor,
+    );
+  }
+}
+
+
+
+
+
+
 // import 'package:flutter/material.dart';
 
 // class BdJobsSearchPage extends StatefulWidget {

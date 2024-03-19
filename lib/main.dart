@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:job_search/app_bar.dart';
 import 'package:job_search/bd_job_search.dart';
-//import 'package:job_search/app_bar.dart';
 
 void main() {
-  runApp(const JobSearch());
+  runApp(
+    const JobSearch(),
+  );
 }
 
 class JobSearch extends StatelessWidget {
@@ -24,15 +26,8 @@ class JobSearchAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: const Text('AppBar Separated from Main'),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.abc),
-          ),
-        ],
+      appBar: const CustomAppBar(
+        backgroundColor: Colors.red,
       ),
       body: Column(
         children: [
@@ -57,24 +52,6 @@ class JobSearchAppBar extends StatelessWidget {
           //Checkbox(value: value, onChanged: onChanged)
         ],
       ),
-    );
-  }
-}
-
-class MyWidget extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-  final Color backgroundColor;
-  const MyWidget({
-    super.key,
-    required this.title,
-    required this.backgroundColor,
-  });
-  @override
-  Size get preferredSize => Size.fromHeight(40);
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.green,
     );
   }
 }
