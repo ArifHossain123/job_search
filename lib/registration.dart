@@ -70,11 +70,27 @@ class _AppRegistrationState extends State<AppRegistration> {
               Column(
                 children: [
                   Container(
-                    height: 100,
+                    height: 130,
                     width: 360,
-                    color: Colors.grey,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 243, 243, 243),
+                      // border: Border.all(
+                      //   width: .4,
+                      // ),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color.fromARGB(255, 201, 201, 201).withOpacity(.6),
+                          spreadRadius: 1,
+                          blurRadius: 3,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   Container(
                     height: 100,
                     width: 360,
