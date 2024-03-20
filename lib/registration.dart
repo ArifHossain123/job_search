@@ -32,14 +32,14 @@ class _AppRegistrationState extends State<AppRegistration> {
           },
         ),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text(
                     '  Registration',
@@ -50,10 +50,10 @@ class _AppRegistrationState extends State<AppRegistration> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 children: <Widget>[
                   Text(
                     '  Please choose your relevant type',
@@ -64,8 +64,26 @@ class _AppRegistrationState extends State<AppRegistration> {
                   )
                 ],
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Column(
+                children: [
+                  Container(
+                    height: 100,
+                    width: 360,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(height: 20,),
+                  Container(
+                    height: 100,
+                    width: 360,
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
