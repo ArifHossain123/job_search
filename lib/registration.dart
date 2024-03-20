@@ -30,18 +30,35 @@ class _AppRegistrationState extends State<AppRegistration> {
           SizedBox(
             height: 10,
           ),
-          Row(
+          Column(
             children: [
-              Text(
-                'Registration',
-                style: TextStyle(
-                  color: Colors.lightBlue,
-                  fontSize: 24,
-                ),
-              )
+              Row(
+                children: [
+                  Text(
+                    '  Registration',
+                    style: TextStyle(
+                      color: Colors.lightBlue,
+                      fontSize: 26,
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: <Widget>[
+                  Text(
+                    '  Please choose your relevant type',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 24,
+                    ),
+                  )
+                ],
+              ),
             ],
-          ),
-          Row(),
+          )
         ],
       ),
     );
