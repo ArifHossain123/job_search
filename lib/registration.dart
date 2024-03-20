@@ -10,6 +10,8 @@ class AppRegistration extends StatefulWidget {
 class _AppRegistrationState extends State<AppRegistration> {
   @override
   Widget build(BuildContext context) {
+  //  final double height = MediaQuery.of(context).size.height;
+   // final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 35,
@@ -71,22 +73,21 @@ class _AppRegistrationState extends State<AppRegistration> {
                 children: [
                   Container(
                     height: 130,
-                    width: 360,
+                    // width: 360,
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 243, 243, 243),
-                      // border: Border.all(
-                      //   width: .4,
-                      // ),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color.fromARGB(255, 201, 201, 201).withOpacity(.6),
+                          color: const Color.fromARGB(255, 201, 201, 201)
+                              .withOpacity(.6),
                           spreadRadius: 1,
                           blurRadius: 3,
                           offset: const Offset(0, 3),
                         ),
                       ],
                     ),
+                    child:const Stack(children: [Positioned(child: Material())],),
                   ),
                   const SizedBox(
                     height: 20,
