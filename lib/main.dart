@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:job_search/app_bar.dart';
-import 'package:job_search/bd_job_search.dart';
+import 'package:job_search/registration.dart';
 
 void main() {
   runApp(
@@ -36,7 +36,7 @@ class JobSearchAppBar extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const BdJobSearch(),
+                  builder: (context) => const AppRegistration(),
                 ),
               );
             },
