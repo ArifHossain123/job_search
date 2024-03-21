@@ -74,6 +74,7 @@ class _AppRegistrationState extends State<AppRegistration> {
                   Container(
                     height: 130,
                     // width: 360,
+                    color: Colors.amber,
 
                     child: Stack(
                       children: [
@@ -102,13 +103,20 @@ class _AppRegistrationState extends State<AppRegistration> {
                         ),
                         Positioned(
                           top: 0,
-                          left:20,
+                          left: 17,
                           child: Card(
-                            child: Container(
-                              height: 50,
-                              width: 50,
-                             
-                              color: Colors.black,
+                            child: ClipPath(
+                              child: Container(
+                                height: 80,
+                                width: width * 0.25,
+                                decoration:const BoxDecoration(
+                                  color: Color.fromARGB(255, 14, 158, 19),
+                                  borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(100),
+                                    bottomRight: Radius.circular(100),
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
