@@ -11,7 +11,7 @@ class _AppRegistrationState extends State<AppRegistration> {
   @override
   Widget build(BuildContext context) {
     //  final double height = MediaQuery.of(context).size.height;
-     final double width = MediaQuery.of(context).size.width;
+    final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 35,
@@ -74,24 +74,43 @@ class _AppRegistrationState extends State<AppRegistration> {
                   Container(
                     height: 130,
                     // width: 360,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 243, 243, 243),
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color.fromARGB(255, 201, 201, 201)
-                              .withOpacity(.6),
-                          spreadRadius: 1,
-                          blurRadius: 3,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child:  Stack(
+
+                    child: Stack(
                       children: [
                         Positioned(
-                          child: Material(child: Container(height:130.0 ,
-                          width: width*0.9,),),
+                          left: 20,
+                          child: Material(
+                            child: Container(
+                              height: 130.0,
+                              width: width * 0.9,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 243, 243, 243),
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color:
+                                        const Color.fromARGB(255, 201, 201, 201)
+                                            .withOpacity(.6),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: const Offset(-3, 3),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          left:20,
+                          child: Card(
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                             
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                       ],
                     ),
