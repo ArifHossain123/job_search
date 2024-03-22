@@ -106,10 +106,11 @@ class _AppRegistrationState extends State<AppRegistration> {
                           left: 17,
                           child: Card(
                             child: ClipPath(
+                              clipper: CustomClipPath(),
                               child: Container(
                                 height: 80,
                                 width: width * 0.25,
-                                decoration:const BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 14, 158, 19),
                                   borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(100),
@@ -138,5 +139,29 @@ class _AppRegistrationState extends State<AppRegistration> {
         ],
       ),
     );
+  }
+}
+
+class CustomClipPath extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    double W = size.width;
+    double h = size.height;
+    final path = Path();
+    path.lineTo(0, h);
+    path.quadraticBezierTo(
+      W * 0.5,
+      h - 100,
+      W,
+      h,
+    );
+    path.lineTo(W, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return false;
   }
 }
