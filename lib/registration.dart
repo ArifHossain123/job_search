@@ -73,9 +73,6 @@ class _AppRegistrationState extends State<AppRegistration> {
                 children: [
                   Container(
                     height: 130,
-                    // width: 360,
-                    color: Colors.amber,
-
                     child: Stack(
                       children: [
                         Positioned(
