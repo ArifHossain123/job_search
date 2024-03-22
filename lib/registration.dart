@@ -108,13 +108,12 @@ class _AppRegistrationState extends State<AppRegistration> {
                             child: ClipPath(
                               clipper: CustomClipPath(),
                               child: Container(
-                                height: 80,
-                                width: width * 0.25,
+                                height: 100,
+                                width: width * 0.35,
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 14, 158, 19),
                                   borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(100),
-                                    bottomRight: Radius.circular(100),
+                                    bottomRight: Radius.circular(400),
                                   ),
                                 ),
                               ),
@@ -128,9 +127,53 @@ class _AppRegistrationState extends State<AppRegistration> {
                     height: 20,
                   ),
                   Container(
-                    height: 100,
-                    width: 360,
-                    color: Colors.grey,
+                    height: 130,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 20,
+                          child: Material(
+                            child: Container(
+                              height: 130.0,
+                              width: width * 0.9,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 243, 243, 243),
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color:
+                                        const Color.fromARGB(255, 201, 201, 201)
+                                            .withOpacity(.6),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: const Offset(-3, 3),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          left: 17,
+                          child: Card(
+                            child: ClipPath(
+                              clipper: CustomClipPath(),
+                              child: Container(
+                                height: 100,
+                                width: width * 0.25,
+                                decoration: const BoxDecoration(
+                                  color: Color.fromARGB(255, 14, 158, 19),
+                                  borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(100),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -149,12 +192,12 @@ class CustomClipPath extends CustomClipper<Path> {
     double h = size.height;
     final path = Path();
     path.lineTo(0, h);
-    // path.quadraticBezierTo(
-    //   W * 0.5,
-    //   h - 100,
-    //   W,
-    //   h,
-    // );
+    path.quadraticBezierTo(
+      W,
+      h + 100,
+      W,
+      h,
+    );
     path.lineTo(W, 0);
     path.close();
     return path;
