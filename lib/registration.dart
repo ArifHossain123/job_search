@@ -83,7 +83,7 @@ class _AppRegistrationState extends State<AppRegistration> {
                               width: width * 0.9,
                               decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 243, 243, 243),
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius:BorderRadius.circular(10),
                                 boxShadow: [
                                   BoxShadow(
                                     color:
@@ -100,17 +100,20 @@ class _AppRegistrationState extends State<AppRegistration> {
                         ),
                         Positioned(
                           top: 0,
-                          left: 17,
-                          child: Card(
+                          left: 20,
+                          child: Container(
                             child: ClipPath(
                               clipper: CustomClipPath(),
                               child: Container(
                                 height: 100,
-                                width: width * 0.35,
+                                width: width * 0.25,
                                 decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 14, 158, 19),
                                   borderRadius: BorderRadius.only(
-                                    bottomRight: Radius.circular(400),
+                                    topLeft: Radius.circular(10),
+                                    topRight: Radius.circular(10),
+                                    bottomRight: Radius.circular(100),
+                                    bottomLeft: Radius.circular(10),
                                   ),
                                 ),
                               ),
@@ -152,17 +155,20 @@ class _AppRegistrationState extends State<AppRegistration> {
                         ),
                         Positioned(
                           top: 0,
-                          left: 17,
-                          child: Card(
+                          left: 20,
+                          child: Container(
                             child: ClipPath(
                               clipper: CustomClipPath(),
                               child: Container(
                                 height: 100,
                                 width: width * 0.25,
                                 decoration: const BoxDecoration(
-                                  color: Color.fromARGB(255, 14, 158, 19),
+                                  color: Color.fromARGB(255, 0, 131, 218),
                                   borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    topRight: Radius.circular(10),
                                     bottomRight: Radius.circular(100),
+                                    bottomLeft: Radius.circular(10),
                                   ),
                                 ),
                               ),
