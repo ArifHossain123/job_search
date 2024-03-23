@@ -250,8 +250,14 @@ class _AppRegistrationState extends State<AppRegistration> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 40,),
-                  Container(child: Text('kadcmsakxdm'),)
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                    child:const Image(
+                      image: AssetImage('assets/images/communication1.jpg'),
+                    ),
+                  ),
                 ],
               ),
             ],
