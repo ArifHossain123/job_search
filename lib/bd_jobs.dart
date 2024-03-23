@@ -25,7 +25,12 @@ class _JobsState extends State<Jobs> {
           ),
         ],
       ),
-      floatingActionButton:FloatingActionButton(onPressed: () {
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.arrow_forward,
+          color: Colors.white,
+        ),
+        onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -33,7 +38,7 @@ class _JobsState extends State<Jobs> {
             ),
           );
         },
-      ) ,
+      ),
     );
   }
 }
