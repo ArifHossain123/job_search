@@ -45,7 +45,7 @@ class _AppRegistrationState extends State<AppRegistration> {
               const Row(
                 children: [
                   Text(
-                    '  Registration',
+                    '   Registration',
                     style: TextStyle(
                       color: Colors.lightBlue,
                       fontSize: 26,
@@ -59,10 +59,10 @@ class _AppRegistrationState extends State<AppRegistration> {
               const Row(
                 children: <Widget>[
                   Text(
-                    '  Please choose your relevant type',
+                    '   Please choose your relevant type',
                     style: TextStyle(
                       color: Colors.black87,
-                      fontSize: 24,
+                      fontSize: 22,
                     ),
                   )
                 ],
@@ -250,6 +250,8 @@ class _AppRegistrationState extends State<AppRegistration> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 40,),
+                  Container(child: Text('kadcmsakxdm'),)
                 ],
               ),
             ],
