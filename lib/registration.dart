@@ -259,7 +259,9 @@ class _AppRegistrationState extends State<AppRegistration> {
                     width: width * 0.94,
 
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 100),
+                      padding: const EdgeInsets.only(
+                        left: 110,
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.end,
