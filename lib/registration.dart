@@ -11,7 +11,7 @@ class AppRegistration extends StatefulWidget {
 class _AppRegistrationState extends State<AppRegistration> {
   @override
   Widget build(BuildContext context) {
-    //  final double height = MediaQuery.of(context).size.height;
+    final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
@@ -251,12 +251,30 @@ class _AppRegistrationState extends State<AppRegistration> {
                     ),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 80,
                   ),
                   Container(
-                    child:const Image(
-                      image: AssetImage('assets/images/communication1.jpg'),
+                    color: const Color.fromARGB(255, 254, 251, 251),
+                    height: height * 0.3,
+                    width: width * 0.94,
+                    child:const Column(mainAxisAlignment: MainAxisAlignment.end,
+                    
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [Text('For any help', style: TextStyle(color: Colors.black, fontSize: 18),)],
+                        ),
+                        Row(
+                          children: [Text('dkdolwks')],
+                        ),
+                      ],
                     ),
+                    // child: const Image(
+                    //   image: AssetImage(
+                    //     'assets/images/communication2.jpg',
+                    //   ),
+                    //   fit: BoxFit.fill,
+                    // ),
                   ),
                 ],
               ),
