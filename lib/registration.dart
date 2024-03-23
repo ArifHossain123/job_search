@@ -82,7 +82,7 @@ class _AppRegistrationState extends State<AppRegistration> {
                             child: Material(
                               child: Container(
                                 height: 130.0,
-                                width: width * 0.9,
+                                width: width * 0.94,
                                 decoration: BoxDecoration(
                                   color:
                                       const Color.fromARGB(255, 243, 243, 243),
@@ -130,7 +130,7 @@ class _AppRegistrationState extends State<AppRegistration> {
                               children: [
                                 Container(
                                   child: const Text(
-                                    "Special Skilled Category",
+                                    "Functional Category",
                                     style: TextStyle(
                                       color: Color.fromARGB(255, 0, 66, 188),
                                       fontSize: 23,
@@ -142,7 +142,7 @@ class _AppRegistrationState extends State<AppRegistration> {
                                 ),
                                 Container(
                                   child: const Text(
-                                    "Electronics Tecnition, Driver,",
+                                    "Receptionist, Data Entry",
                                     style: TextStyle(
                                       fontSize: 19,
                                     ),

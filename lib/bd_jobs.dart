@@ -19,6 +19,7 @@ class _JobsState extends State<Jobs> {
               height: 30,
               width: 30,
               color: Colors.red,
+              child: Text('lcmxskm'),
             ),
           ),
         ],
