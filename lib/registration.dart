@@ -283,9 +283,9 @@ class _AppRegistrationState extends State<AppRegistration> {
                           Row(
                             children: <Widget>[
                               RichText(
-                                text: const TextSpan(
+                                text: TextSpan(
                                   children: [
-                                    TextSpan(
+                                    const TextSpan(
                                       text: 'Call at   ',
                                       style: TextStyle(
                                         color: Colors.green,
@@ -293,13 +293,22 @@ class _AppRegistrationState extends State<AppRegistration> {
                                       ),
                                     ),
                                     WidgetSpan(
-                                      child: Icon(
-                                        Icons.call,
-                                        size: 14,
-                                        color: Colors.green,
+                                      child: Container(
+                                        height: 20,
+                                        width: 20,
+                                        decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                        ),
+                                        child: const Icon(
+                                          Icons.call,
+                                          size: 14,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
-                                    TextSpan(
+                                    const TextSpan(
                                       text: '  10101',
                                       style: TextStyle(
                                         color: Colors.green,

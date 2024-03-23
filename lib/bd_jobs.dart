@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_search/create_account.dart';
 
 class Jobs extends StatefulWidget {
   const Jobs({super.key});
@@ -24,6 +25,15 @@ class _JobsState extends State<Jobs> {
           ),
         ],
       ),
+      floatingActionButton:FloatingActionButton(onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const CreateAccount(),
+            ),
+          );
+        },
+      ) ,
     );
   }
 }
