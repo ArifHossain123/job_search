@@ -9,6 +9,7 @@ class Jobs extends StatefulWidget {
 }
 
 class _JobsState extends State<Jobs> {
+  Color _containerColor = Colors.white;
   @override
   Widget build(BuildContext context) {
     // final double height = MediaQuery.of(context).size.height;
@@ -63,6 +64,88 @@ class _JobsState extends State<Jobs> {
                         ],
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  _containerColor = Colors.blue;
+                                });
+                              },
+                              child: Container(
+                                height: 60,
+                                width: width * 0.9,
+                                decoration: BoxDecoration(
+                                  color: _containerColor,
+                                  border: Border.all(
+                                    width: 1,
+                                    color: Colors.grey,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(top: 15, left: 20),
+                                  child: Text(
+                                    'Accounting/Finance',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Color.fromARGB(255, 172, 0, 0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  _containerColor = Colors.blue;
+                                });
+                              },
+                              child: Container(
+                                height: 60,
+                                width: width * 0.9,
+                                decoration: BoxDecoration(
+                                  color: _containerColor,
+                                  border: Border.all(
+                                    width: 1,
+                                    color: Colors.grey,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(top: 15, left: 20),
+                                  child: Text(
+                                    'Accounting/Finance',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Color.fromARGB(255, 172, 0, 0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
