@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_search/bd_jobs.dart';
 
 class AppRegistration extends StatefulWidget {
   const AppRegistration({super.key});
@@ -72,7 +73,14 @@ class _AppRegistrationState extends State<AppRegistration> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Jobs(),
+                        ),
+                      );
+                    },
                     child: Container(
                       height: 130,
                       child: Stack(
@@ -229,7 +237,7 @@ class _AppRegistrationState extends State<AppRegistration> {
                                 ),
                                 Container(
                                   child: const Text(
-                                    "Electronics Tecnition, Driver,",
+                                    "Electronics Technition, Driver,",
                                     style: TextStyle(
                                       fontSize: 19,
                                     ),
