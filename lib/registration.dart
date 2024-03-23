@@ -251,21 +251,60 @@ class _AppRegistrationState extends State<AppRegistration> {
                     ),
                   ),
                   const SizedBox(
-                    height: 80,
+                    height: 50,
                   ),
+                
                   Container(
                     color: const Color.fromARGB(255, 254, 251, 251),
                     height: height * 0.3,
                     width: width * 0.94,
-                    child:const Column(mainAxisAlignment: MainAxisAlignment.end,
                     
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Row(
+                        const Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [Text('For any help', style: TextStyle(color: Colors.black, fontSize: 18),)],
+                          children: [
+                            Text(
+                              'For any help',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            )
+                          ],
                         ),
+                        SizedBox(height: 4,),
                         Row(
-                          children: [Text('dkdolwks')],
+                          children: <Widget>[
+                            RichText(
+                              text: const TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: 'Call at ',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  WidgetSpan(
+                                    child: Icon(
+                                      Icons.call,
+                                      size: 14,
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '10101',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontSize: 18,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
