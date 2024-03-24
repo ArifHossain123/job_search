@@ -141,6 +141,33 @@ class _CreateAccountState extends State<CreateAccount> {
                             ],
                           ),
                           //divider
+                          Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Container(
+                                  margin: const EdgeInsets.only(
+                                    left: 10,
+                                    right: 10,
+                                  ),
+                                  child: const Divider(
+                                    height: 40,
+                                  ),
+                                ),
+                              ),
+                              const Text('OR'),
+                              Expanded(
+                                child: Container(
+                                  margin: const EdgeInsets.only(
+                                    left: 10,
+                                    right: 20,
+                                  ),
+                                  child: const Divider(
+                                    height: 40,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
 
                           Row(
                             children: [
