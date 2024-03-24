@@ -1,5 +1,9 @@
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:job_search/enter_information.dart';
 //import 'package:sign_in_button/sign_in_button.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -11,6 +15,7 @@ class CreateAccount extends StatefulWidget {
 
 class _CreateAccountState extends State<CreateAccount> {
   Color _containerColor = Colors.white;
+  User? user;
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -56,7 +61,9 @@ class _CreateAccountState extends State<CreateAccount> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 45,),
+                  const SizedBox(
+                    height: 45,
+                  ),
                   const Padding(
                     padding: EdgeInsets.only(
                       left: 15,
@@ -82,64 +89,81 @@ class _CreateAccountState extends State<CreateAccount> {
                     children: [
                       Column(
                         children: [
-                          Row(
-                            children: [
-                              TextButton(
-                                onPressed: () {},
-                                child: Container(
-                                  height: 55,
-                                  width: width * 0.93,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(
-                                      8,
-                                    ),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
+                          TextButton(
+                            onPressed: () async {
+                              print('Button clicked');
+
+                              await signInWithGoogle().then((value) {
+                                setState(() {
+                                  user = value.user;
+                                });
+
+                                print(user!.displayName);
+                                print(user!.email);
+                              });
+                            },
+                            child: Container(
+                              height: 55,
+                              width: width * 0.93,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                  8,
+                                ),
+                                border: Border.all(
+                                  width: 0.5,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              child: const Center(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    FaIcon(FontAwesomeIcons.googlePlusG),
+                                    Text(
                                       'Import from Google',
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
-                            ],
+                            ),
                           ),
                           const SizedBox(
                             height: 10,
                           ),
-                          Row(
-                            children: [
-                              TextButton(
-                                onPressed: () {},
-                                child: Container(
-                                  height: 55,
-                                  width: width * 0.93,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(
-                                      8,
-                                    ),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
+                          TextButton(
+                            onPressed: () {},
+                            child: Container(
+                              height: 55,
+                              width: width * 0.93,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                  8,
+                                ),
+                                border: Border.all(
+                                  width: 0.5,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              child: const Center(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    FaIcon(FontAwesomeIcons.facebook),
+                                    Text(
                                       'Import from Facebook',
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
-                            ],
+                            ),
                           ),
                           //divider
                           Row(
@@ -180,8 +204,17 @@ class _CreateAccountState extends State<CreateAccount> {
                             padding: const EdgeInsets.only(left: 2),
                             child: InkWell(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const EnterYourInformation(),
+                                  ),
+                                );
+
                                 setState(() {
-                                  _containerColor = Colors.black;
+                                  _containerColor =
+                                      Color.fromARGB(255, 0, 255, 81);
                                 });
                               },
                               child: Container(
@@ -200,7 +233,7 @@ class _CreateAccountState extends State<CreateAccount> {
                                     'Enter Your Information',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.white,
+                                      color: Color.fromARGB(255, 0, 173, 29),
                                     ),
                                   ),
                                 ),
@@ -353,5 +386,23 @@ class _CreateAccountState extends State<CreateAccount> {
         ],
       ),
     );
+  }
+
+  Future<UserCredential> signInWithGoogle() async {
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
+
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+
+    // Once signed in, return the UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
   }
 }

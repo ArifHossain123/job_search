@@ -1,4 +1,6 @@
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+//import 'package:google_sign_in/google_sign_in.dart';
 import 'package:job_search/bd_jobs.dart';
 
 class AppRegistration extends StatefulWidget {
@@ -338,7 +340,9 @@ class _AppRegistrationState extends State<AppRegistration> {
       ),
     );
   }
+
 }
+
 
 class CustomClipPath extends CustomClipper<Path> {
   @override

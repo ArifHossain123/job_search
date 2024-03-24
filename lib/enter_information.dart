@@ -10,6 +10,22 @@ class EnterYourInformation extends StatefulWidget {
 class _EnterYourInformationState extends State<EnterYourInformation> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        actions: [],
+      ),
+      body: Column(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        child: Container(
+          child: const Icon(
+            Icons.arrow_forward,
+            color: Colors.white,
+            size: 26,
+          ),
+        ),
+        onPressed: () {},
+      ),
+    );
   }
 }
