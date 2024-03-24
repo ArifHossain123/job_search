@@ -91,8 +91,6 @@ class _CreateAccountState extends State<CreateAccount> {
                         children: [
                           TextButton(
                             onPressed: () async {
-                              print('Button clicked');
-
                               await signInWithGoogle().then((value) {
                                 setState(() {
                                   user = value.user;
