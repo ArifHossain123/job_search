@@ -10,7 +10,7 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
-  // Color _containerColor = Colors.white;
+  Color _containerColor = Colors.white;
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -56,9 +56,10 @@ class _CreateAccountState extends State<CreateAccount> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 45,),
                   const Padding(
                     padding: EdgeInsets.only(
-                      left: 20,
+                      left: 15,
                     ),
                     child: SizedBox(
                       height: 60,
@@ -86,7 +87,7 @@ class _CreateAccountState extends State<CreateAccount> {
                               TextButton(
                                 onPressed: () {},
                                 child: Container(
-                                  height: 50,
+                                  height: 55,
                                   width: width * 0.93,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(
@@ -117,7 +118,7 @@ class _CreateAccountState extends State<CreateAccount> {
                               TextButton(
                                 onPressed: () {},
                                 child: Container(
-                                  height: 50,
+                                  height: 55,
                                   width: width * 0.93,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(
@@ -150,6 +151,8 @@ class _CreateAccountState extends State<CreateAccount> {
                                     right: 10,
                                   ),
                                   child: const Divider(
+                                    thickness: 1,
+                                    color: Colors.black,
                                     height: 40,
                                   ),
                                 ),
@@ -163,31 +166,46 @@ class _CreateAccountState extends State<CreateAccount> {
                                   ),
                                   child: const Divider(
                                     height: 40,
+                                    thickness: 1,
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
                             ],
                           ),
-
-                          Row(
-                            children: [
-                              TextButton(
-                                onPressed: () {},
-                                child: Container(
-                                  height: 50,
-                                  width: width * 0.93,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(
-                                      8,
-                                    ),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Colors.black,
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 2),
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  _containerColor = Colors.black;
+                                });
+                              },
+                              child: Container(
+                                height: 55,
+                                width: width * 0.94,
+                                decoration: BoxDecoration(
+                                  color: _containerColor,
+                                  border: Border.all(
+                                    width: 1,
+                                    color: Colors.grey,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    'Enter Your Information',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
                                     ),
                                   ),
                                 ),
                               ),
-                            ],
+                            ),
                           ),
                         ],
                       ),
@@ -258,10 +276,12 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
 
               //last column
-
+              const SizedBox(
+                height: 230,
+              ),
               Container(
                 color: const Color.fromARGB(255, 254, 251, 251),
-                height: height * 0.24,
+                height: height * 0.10,
                 width: width * 0.94,
                 child: Padding(
                   padding: const EdgeInsets.only(

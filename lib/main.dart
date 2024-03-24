@@ -3,6 +3,7 @@ import 'package:job_search/app_bar.dart';
 import 'package:job_search/registration.dart';
 
 
+
 void main() {
   runApp(
     const JobSearch(),
