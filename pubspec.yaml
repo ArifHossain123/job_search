@@ -54,6 +54,7 @@ dev_dependencies:
   # google_sign_in: ^6.2.1
   # url_launcher: ^6.2.5
   # custom_signin_buttons: ^1.0.2
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
