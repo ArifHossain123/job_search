@@ -68,18 +68,20 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 50,
+                      ),
                       TextFormField(
-                        decoration: InputDecoration(
-                          labelText: 'Write Your Name',
-                          icon: Icon(
-                            Icons.verified_user,
+                        keyboardType: TextInputType.name,
+                        decoration: const InputDecoration(
+                          labelText: 'Name',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10),
+                            ),
                           ),
-                          border: OutlineInputBorder(),
                         ),
                       ),
                     ],
