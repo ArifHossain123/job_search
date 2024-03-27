@@ -73,13 +73,17 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                       const SizedBox(
                         height: 50,
                       ),
-                      TextFormField(
-                        keyboardType: TextInputType.name,
-                        decoration: const InputDecoration(
-                          labelText: 'Name',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(10),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextFormField(
+                          keyboardType: TextInputType.name,
+                          decoration: const InputDecoration(
+                            suffixIcon: Icon(Icons.straight_outlined),
+                            labelText: 'Name',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(10),
+                              ),
                             ),
                           ),
                         ),
