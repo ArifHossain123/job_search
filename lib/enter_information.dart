@@ -74,7 +74,7 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                         height: 50,
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: TextFormField(
                           keyboardType: TextInputType.name,
                           decoration: const InputDecoration(
