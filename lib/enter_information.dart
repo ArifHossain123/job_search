@@ -78,8 +78,10 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                         child: TextFormField(
                           keyboardType: TextInputType.name,
                           decoration: const InputDecoration(
-                            suffixIcon: Icon(Icons.straight_outlined),
                             labelText: 'Name',
+                            floatingLabelStyle: TextStyle(
+                              color: Colors.green,
+                            ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(10),
