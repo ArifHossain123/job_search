@@ -18,7 +18,8 @@ class _SelectGenderState extends State<SelectGender> {
       ),
       body: ListView(
         children: <Widget>[
-          Column(children: <Widget>[
+          Column(
+            children: <Widget>[
               Column(
                 children: [
                   Padding(
@@ -54,8 +55,27 @@ class _SelectGenderState extends State<SelectGender> {
               const SizedBox(
                 height: 45,
               ),
-            ],),
+            ],
+          ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        child: Container(
+          child: const Icon(
+            Icons.arrow_forward,
+            color: Colors.white,
+            size: 26,
+          ),
+        ),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SelectGender(),
+            ),
+          );
+        },
       ),
     );
   }
