@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_search/extra_information.dart';
 
 class SelectGender extends StatefulWidget {
   const SelectGender({super.key});
@@ -55,6 +56,16 @@ class _SelectGenderState extends State<SelectGender> {
               const SizedBox(
                 height: 45,
               ),
+              Row(
+                children: [
+                  Text(
+                    'Select gender',
+                    style: TextStyle(
+                      fontSize: 22,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ],
@@ -72,7 +83,7 @@ class _SelectGenderState extends State<SelectGender> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const SelectGender(),
+              builder: (context) => const ExtraInformation(),
             ),
           );
         },
