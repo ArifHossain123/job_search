@@ -29,7 +29,8 @@ class _CreateAccountState extends State<CreateAccount> {
               Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 30,
+                    padding: const EdgeInsets.only(
+                      top: 30,
                       left: 20,
                     ),
                     child: Expanded(
@@ -91,7 +92,7 @@ class _CreateAccountState extends State<CreateAccount> {
                             setState(() {
                               user = value.user;
                             });
-          
+
                             print(user!.displayName);
                             print(user!.email);
                           });
@@ -110,10 +111,11 @@ class _CreateAccountState extends State<CreateAccount> {
                           ),
                           child: const Center(
                             child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                FaIcon(FontAwesomeIcons.googlePlusG),
+                                FaIcon(
+                                  FontAwesomeIcons.google,
+                                ),
                                 Text(
                                   'Import from Google',
                                   style: TextStyle(
@@ -144,8 +146,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           ),
                           child: const Center(
                             child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 FaIcon(FontAwesomeIcons.facebook),
                                 Text(
@@ -205,10 +206,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                     const EnterYourInformation(),
                               ),
                             );
-          
+
                             setState(() {
-                              _containerColor =
-                                  Color.fromARGB(255, 0, 255, 81);
+                              _containerColor = Color.fromARGB(255, 0, 255, 81);
                             });
                           },
                           child: Container(
@@ -259,13 +259,13 @@ class _CreateAccountState extends State<CreateAccount> {
               //   },
               //   backgroundColor: Colors.blueGrey.shade700,
               // ),
-          
+
               // SignInButton(
               //   Buttons.google,
               //   text: "Sign up with Google",
               //   onPressed: () {},
               // ),
-          
+
               //   Padding(
               //     padding: const EdgeInsets.only(left: 20),
               //     child: InkWell(
@@ -301,7 +301,7 @@ class _CreateAccountState extends State<CreateAccount> {
               // ],
             ],
           ),
-          
+
           //last column
           const SizedBox(
             height: 200,

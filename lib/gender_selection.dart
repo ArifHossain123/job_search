@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:job_search/extra_information.dart';
 
 class SelectGender extends StatefulWidget {
@@ -11,7 +12,7 @@ class SelectGender extends StatefulWidget {
 class _SelectGenderState extends State<SelectGender> {
   @override
   Widget build(BuildContext context) {
-    //  final double height = MediaQuery.of(context).size.height;
+    final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
@@ -56,16 +57,134 @@ class _SelectGenderState extends State<SelectGender> {
               const SizedBox(
                 height: 45,
               ),
-              Row(
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    Text(
+                      'Select gender',
+                      style: TextStyle(
+                        fontSize: 22,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Column(
                 children: [
-                  Text(
-                    'Select gender',
-                    style: TextStyle(
-                      fontSize: 22,
+                  Container(
+                    height: height * 0.07,
+                    width: width * 0.9,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.grey.shade400,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                          ),
+                          child: FaIcon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 146, 10, 0),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Male',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 150, 196),
+                            fontSize: 22,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: height * 0.07,
+                    width: width * 0.9,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.grey.shade400,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                          ),
+                          child: FaIcon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 146, 10, 0),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Male',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 150, 196),
+                            fontSize: 22,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: height * 0.07,
+                    width: width * 0.9,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.grey.shade400,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 20,
+                          ),
+                          child: FaIcon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 146, 10, 0),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Male',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 150, 196),
+                            fontSize: 22,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ],
-              ),
+              )
             ],
           ),
         ],
