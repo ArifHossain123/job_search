@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:job_search/password_set.dart';
 
-class ExtraInformation extends StatefulWidget {
-  const ExtraInformation({super.key});
+class PasswordSet extends StatefulWidget {
+  const PasswordSet({super.key});
 
   @override
-  State<ExtraInformation> createState() => _ExtraInformationState();
+  State<PasswordSet> createState() => _PasswordSetState();
 }
 
-class _ExtraInformationState extends State<ExtraInformation> {
-  @override
+class _PasswordSetState extends State<PasswordSet> {
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
