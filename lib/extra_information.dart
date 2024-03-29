@@ -95,6 +95,7 @@ class _ExtraInformationState extends State<ExtraInformation> {
                   left: 15,
                   right: 15,
                   top: 8,
+                  bottom: 5,
                 ),
                 child: TextField(
                   keyboardType: TextInputType.number,
@@ -102,6 +103,53 @@ class _ExtraInformationState extends State<ExtraInformation> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
                     hintText: 'Mobile Number',
+                  ),
+                ),
+              ),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                        left: 15,
+                        right: 10,
+                      ),
+                      child: const Divider(
+                        color: Colors.black,
+                        thickness: 1,
+                        height: 50,
+                      ),
+                    ),
+                  ),
+                  const Text('OR'),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                        left: 15,
+                        right: 15,
+                      ),
+                      child: const Divider(
+                        color: Colors.black,
+                        thickness: 1,
+                        height: 50,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 15,
+                  right: 15,
+                  top: 8,
+                ),
+                child: TextField(
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    hintText: 'Email',
                   ),
                 ),
               ),
