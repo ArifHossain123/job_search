@@ -83,9 +83,33 @@ class _PasswordSetState extends State<PasswordSet> {
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Row(children: [
-                  
-                ],),
+                child: const Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Icon(
+                            Icons.mail,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'maxhendric244@gmail.com',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                      ),
+                    )
+                  ],
+                ),
               ),
 
               Padding(
@@ -121,37 +145,6 @@ class _PasswordSetState extends State<PasswordSet> {
                     hintText: 'Mobile Number',
                   ),
                 ),
-              ),
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.only(
-                        left: 15,
-                        right: 10,
-                      ),
-                      child: const Divider(
-                        color: Colors.black,
-                        thickness: 1,
-                        height: 50,
-                      ),
-                    ),
-                  ),
-                  const Text('OR'),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.only(
-                        left: 15,
-                        right: 15,
-                      ),
-                      child: const Divider(
-                        color: Colors.black,
-                        thickness: 1,
-                        height: 50,
-                      ),
-                    ),
-                  ),
-                ],
               ),
               Padding(
                 padding: const EdgeInsets.only(
