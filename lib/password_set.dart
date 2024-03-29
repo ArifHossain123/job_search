@@ -38,7 +38,7 @@ class _PasswordSetState extends State<PasswordSet> {
                           children: [
                             Container(
                               height: 8,
-                              width: width * 0.60,
+                              width: width * 0.763,
                               decoration: BoxDecoration(
                                 color: Colors.green,
                                 borderRadius: BorderRadius.circular(10),
@@ -54,12 +54,13 @@ class _PasswordSetState extends State<PasswordSet> {
               const SizedBox(
                 height: 45,
               ),
+
               const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Row(
                   children: [
                     Text(
-                      'Provide your Mobile No And Email\nAddress (atleast one)',
+                      'Set as User ID (Email Address\nMobile)',
                       style: TextStyle(
                         fontSize: 22,
                       ),
@@ -67,8 +68,24 @@ class _PasswordSetState extends State<PasswordSet> {
                   ],
                 ),
               ),
+
               const SizedBox(
-                height: 30,
+                height: 20,
+              ),
+              Container(
+                height: 60,
+                width: width * 0.93,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 169, 0, 102),
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.grey,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(children: [
+                  
+                ],),
               ),
 
               Padding(
