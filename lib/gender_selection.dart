@@ -129,7 +129,7 @@ class _SelectGenderState extends State<SelectGender> {
                             left: 20,
                           ),
                           child: FaIcon(
-                            Icons.person,
+                            Icons.woman,
                             color: Color.fromARGB(255, 146, 10, 0),
                           ),
                         ),
@@ -137,7 +137,7 @@ class _SelectGenderState extends State<SelectGender> {
                           width: 10,
                         ),
                         Text(
-                          'Male',
+                          'Female',
                           style: TextStyle(
                             color: Color.fromARGB(255, 0, 150, 196),
                             fontSize: 22,
@@ -166,7 +166,7 @@ class _SelectGenderState extends State<SelectGender> {
                             left: 20,
                           ),
                           child: FaIcon(
-                            Icons.person,
+                            Icons.fitness_center,
                             color: Color.fromARGB(255, 146, 10, 0),
                           ),
                         ),
@@ -174,7 +174,7 @@ class _SelectGenderState extends State<SelectGender> {
                           width: 10,
                         ),
                         Text(
-                          'Male',
+                          'Others',
                           style: TextStyle(
                             color: Color.fromARGB(255, 0, 150, 196),
                             fontSize: 22,
