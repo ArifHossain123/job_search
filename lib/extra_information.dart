@@ -71,9 +71,41 @@ class _ExtraInformationState extends State<ExtraInformation> {
               const SizedBox(
                 height: 30,
               ),
-              TextFormField(
-                decoration: InputDecoration(),
+
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextFormField(
+                  keyboardType: TextInputType.name,
+                  decoration: const InputDecoration(
+                    hintText: 'Bangladesh (88)',
+                    labelText: 'Country/Region Code',
+                    floatingLabelStyle: TextStyle(
+                      color: Colors.green,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                  ),
+                ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 15,
+                  right: 15,
+                  top: 8,
+                ),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: 'Mobile Number',
+                  ),
+                ),
+              ),
+              /////////
               Column(
                 children: [
                   ///////
