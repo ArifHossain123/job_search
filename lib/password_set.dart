@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class PasswordSet extends StatefulWidget {
   const PasswordSet({super.key});
 
@@ -205,13 +204,10 @@ class _PasswordSetState extends State<PasswordSet> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         hintText: 'Password',
+                        suffixIcon: const Icon(Icons.visibility),
                       ),
-                      
                     ),
-                    
-                    
                   ),
-                
                 ],
               ),
               Padding(
@@ -226,7 +222,8 @@ class _PasswordSetState extends State<PasswordSet> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    hintText: 'Email',
+                    hintText: 'Confirm Password',
+                    suffixIcon: const Icon(Icons.visibility),
                   ),
                 ),
               ),
