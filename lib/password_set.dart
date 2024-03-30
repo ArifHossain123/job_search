@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class PasswordSet extends StatefulWidget {
   const PasswordSet({super.key});
 
@@ -152,9 +153,11 @@ class _PasswordSetState extends State<PasswordSet> {
                   ],
                 ),
               ),
-              
+              const SizedBox(
+                height: 30,
+              ),
               const Padding(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(15),
                 child: Column(
                   children: [
                     Row(
@@ -168,30 +171,48 @@ class _PasswordSetState extends State<PasswordSet> {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       children: [
-                        Text('scdjhnsedj'),
+                        Text(
+                          'Use at least 8 to 12 characters',
+                          style: TextStyle(
+                            color: Colors.black54,
+                            fontSize: 16,
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
 
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 15,
-                  right: 15,
-                  top: 8,
-                  bottom: 5,
-                ),
-                child: TextField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    hintText: 'Mobile Number',
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 15,
+                      right: 15,
+                      top: 8,
+                      bottom: 5,
+                    ),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        hintText: 'Password',
+                      ),
+                      
+                    ),
+                    
+                    
                   ),
-                ),
+                
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -199,7 +220,7 @@ class _PasswordSetState extends State<PasswordSet> {
                   right: 15,
                   top: 8,
                 ),
-                child: TextField(
+                child: TextFormField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
