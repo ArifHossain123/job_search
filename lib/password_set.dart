@@ -111,25 +111,72 @@ class _PasswordSetState extends State<PasswordSet> {
                   ],
                 ),
               ),
-
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: TextFormField(
-                  keyboardType: TextInputType.name,
-                  decoration: const InputDecoration(
-                    hintText: 'Bangladesh (88)',
-                    labelText: 'Country/Region Code',
-                    floatingLabelStyle: TextStyle(
-                      color: Colors.green,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                    ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 60,
+                width: width * 0.93,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.grey,
                   ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Icon(
+                            Icons.mobile_friendly,
+                            size: 30,
+                            color: Colors.black38,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'Mobile Number',
+                      style: TextStyle(
+                        color: Colors.black38,
+                        fontSize: 22,
+                      ),
+                    )
+                  ],
                 ),
               ),
+              
+              const Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Type Password',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text('scdjhnsedj'),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               Padding(
                 padding: const EdgeInsets.only(
                   left: 15,
