@@ -86,7 +86,7 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                   ),
                 ),
               ),
-                    const SizedBox(
+              const SizedBox(
                 height: 250,
               ),
               Container(
@@ -133,8 +133,7 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                                     width: 20,
                                     decoration: BoxDecoration(
                                       color: Colors.green,
-                                      borderRadius:
-                                          BorderRadius.circular(5),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                     child: const Icon(
                                       Icons.call,
@@ -159,7 +158,6 @@ class _EnterYourInformationState extends State<EnterYourInformation> {
                   ),
                 ),
               ),
-           
             ],
           ),
         ],
